@@ -1,0 +1,9 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "4c63ed3"
+hash = "e3260d0b1feded8c8e3ae3afa1169e30"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-frappe"
+rev = "4770a34"
+hash = "1844f850b0c5d1af511c84399c95e3d7"

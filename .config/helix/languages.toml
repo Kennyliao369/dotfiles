@@ -1,0 +1,5 @@
+[language-server.qmlls]
+command = "qmlls6"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
