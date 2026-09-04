@@ -36,7 +36,13 @@ unset _cachedir
 # yazi shell wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	command yazi "$@" --cwd-file="$tmp"
+
+  # original: uses yazi's default image renderer
+	# command yazi "$@" --cwd-file="$tmp"
+
+	# chafa: hide NIRI_SCOKET so image preview falls back to chafa
+	env -u NIRI_SOCKET yazi "$@" --cwd-file="$tmp"    
+
 	IFS= read -r -d '' cwd < "$tmp"
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	command rm -f -- "$tmp"
