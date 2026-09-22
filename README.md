@@ -146,7 +146,6 @@ sudo pacman -S neovim
 Run these after a system upgrade or a config change:
 
 ```sh
-noctalia config validate   # errors, unknown keys and settings that need migration
-niri validate              # parse errors in the niri config
-hx --health                # missing language servers for Helix
+noctalia config validate
+niri validate
 ```
