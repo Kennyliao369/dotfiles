@@ -4,7 +4,7 @@ autoload -Uz add-zsh-hook
 # ssh info
 typeset -g _host_info=''
 
-[[ -n $SSH_CONNECTION ]] && _host_info='%F{108}%m%f:'
+[[ -n $SSH_CONNECTION ]] && _host_info='%F{green}%m%f:'
 
 # git ststus
 typeset -g _git_info=''
@@ -44,7 +44,6 @@ _git_prompt() {
       esac
   done
 
-  branch=${branch//'%'/%%}
   [[ $branch == '(detached)' ]] && branch="%F{red}${oid[1,7]}%f"
 
   local -a flags
@@ -56,7 +55,7 @@ _git_prompt() {
   (( behind    )) && flags+="%F{cyan}⇣$behind%f"       # 落後上游
   (( $#flags )) || flags=( "%F{green}✔%f" )            # 全乾淨
 
-  _git_info="%F{244}⎇%f %F{140}$branch%f %F{244}[%f${(j: :)flags}%F{244}]%f"
+  _git_info="%F{8}⎇%f %F{magenta}$branch%f %F{8}[%f${(j: :)flags}%F{8}]%f"
   return 0    
 }
 
@@ -64,5 +63,5 @@ _git_prompt() {
 add-zsh-hook precmd _git_prompt
 
 # Prompt
-PROMPT='%F{244}[%f${_host_info}%(!.%F{red}.%F{110})%n%f%F{244}]%f %F{140}%(5~|%-1~/…/%3~|%~)%f %(?.%F{99}.%F{red})%(!.#.❯)%f '
+PROMPT='%F{8}[%f${_host_info}%(!.%F{red}.%F{blue})%n%f%F{8}]%f %F{magenta}%(5~|%-1~/…/%3~|%~)%f %(?.%F{13}.%F{red})%(!.#.❯)%f '
 RPROMPT='${_git_info}'

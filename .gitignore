@@ -1,0 +1,9 @@
+# Noctalia templates
+.config/alacritty/themes/noctalia.toml
+.config/helix/themes/noctalia.toml
+.config/niri/noctalia.kdl
+.config/yazi/flavors/noctalia.yazi/
+
+# ya pkg
+.config/yazi/flavors/catppuccin-frappe.yazi/
+.config/yazi/plugins/mount.yazi/

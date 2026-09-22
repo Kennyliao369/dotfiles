@@ -1,5 +1,6 @@
 [flavor]
-dark = "catppuccin-frappe"
+dark = "noctalia"
+light = "noctalia"
 
 [status]
 sep_left  = { open = "", close = "" }
