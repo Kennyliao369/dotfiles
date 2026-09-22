@@ -41,6 +41,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 spawn-at-startup "noctalia"
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 include "local.kdl"
 include "appearance.kdl"
 include "rules.kdl"
