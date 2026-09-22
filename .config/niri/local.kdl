@@ -4,3 +4,10 @@ output "eDP-1" {
     transform "normal"
     position x=0 y=0
 }
+
+output "Samsung Electric Company C32F391 H4ZN400287" {
+    mode "1920x1080@60.000"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}

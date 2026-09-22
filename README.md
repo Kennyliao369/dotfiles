@@ -58,6 +58,15 @@ sudo systemctl enable greetd
 sudo pacman -S alacritty ttf-jetbrains-mono-nerd
 ```
 
+## Zen Browser
+
+```sh
+paru -S zen-browser-bin
+```
+
+- Settings → Accessibility → Website contrast → **Automatic (use system settings)**.
+- Colors come from Noctalia's `zen-browser` template. Restart Zen after the theme changes.
+
 ## zsh
  
 ```sh
