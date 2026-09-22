@@ -1,10 +1,11 @@
+# Theme
 [theme]
 mode = "dark"
 source = "wallpaper"
 
-[theme.templates]
-builtin_ids = ["alacritty", "btop", "gtk3", "gtk4", "helix", "niri", "qt"]
-community_ids = ["zen-browser", "fastfetch", "fcitx5", "yazi"]
+  [theme.templates]
+  builtin_ids = ["alacritty", "btop", "gtk3", "gtk4", "helix", "niri", "qt"]
+  community_ids = ["zen-browser", "fastfetch", "fcitx5", "yazi"]
 
 [wallpaper]
 directory = "~/Pictures/Wallpaper"
@@ -13,28 +14,26 @@ automation.enabled = true
 [backdrop]
 enabled = true
 
+# Bar & panels
 [bar.default]
 position = "left"
 start = ["launcher", "clipboard", "workspaces"]
 end = ["media", "tray", "notifications", "group:g1", "group:g2", "battery", "session"]
 
-[[bar.default.capsule_group]]
-id = "g1"
-members = ["brightness", "volume"]
-fill = "surface_variant"
-padding = 6.0
+  [[bar.default.capsule_group]]
+  id = "g1"
+  members = ["brightness", "volume"]
+  fill = "surface_variant"
+  padding = 6.0
 
-[[bar.default.capsule_group]]
-id = "g2"
-members = ["network", "bluetooth"]
-fill = "surface_variant"
-padding = 6.0
+  [[bar.default.capsule_group]]
+  id = "g2"
+  members = ["network", "bluetooth"]
+  fill = "surface_variant"
+  padding = 6.0
 
 [control_center]
 hidden_tabs = ["weather"]
-
-[weather]
-enabled = false
 
 [notification]
 history_retention_hours = 3
@@ -43,6 +42,28 @@ history_retention_hours = 3
 position = "bottom_center"
 kinds = { keyboard_layout = false, media = false }
 
+# idle
+[idle]
+behavior_order = ["lock", "screen-off", "suspend"]
+
+  [idle.behavior.lock]
+  timeout = 600
+  action = "lock"
+
+  [idle.behavior.screen-off]
+  timeout = 630
+  action = "screen_off"
+
+  [idle.behavior.suspend]
+  timeout = 1800
+  action = "suspend"
+  lock_before_suspend = false
+
+# Services
+[weather]
+enabled = false
+
+# Shell
 [shell]
 lang = "zh-Hans"
 polkit_agent = true

@@ -1,7 +1,7 @@
 # Default program
 export EDITOR="helix"
 export VISUAL="$EDITOR"
-export BROWSER="firefox"
+export BROWSER="zen-browser"
 export PAGER="less"
 
 # XDG base dir
